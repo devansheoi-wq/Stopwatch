@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #17335d, #080d19 70%);
+  color: white;
+}
+
+.stopwatch {
+  width: 100%;
+  max-width: 520px;
+  padding: 35px 25px;
+  text-align: center;
+  border: 1px solid #31445f;
+  border-radius: 24px;
+  background: rgba(16, 29, 49, 0.9);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 8px;
+  color: #9fb2ce;
+}
+
+.timer {
+  margin: 45px 0;
+  font-size: clamp(3.2rem, 12vw, 5rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #49e4ff;
+  text-shadow: 0 0 25px #49e4ff35;
+}
+
+.milliseconds {
+  font-size: 0.55em;
+  color: #a78bfa;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.buttons button {
+  padding: 14px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s, opacity .2s;
+}
+
+.buttons button:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.start { background: #36e2aa; color: #062c23; }
+.pause { background: #ffd166; color: #332300; }
+.lap { background: #9b8bff; color: #1d1742; }
+.reset { background: #ff7185; color: #3b0812; }
+
+.lap-section {
+  margin-top: 35px;
+  text-align: left;
+}
+
+.lap-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+#lapList {
+  list-style: none;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+#lapList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-bottom: 1px solid #31445f;
+  color: #c5d6ed;
+  font-variant-numeric: tabular-nums;
+}
+
+#lapList .empty {
+  justify-content: center;
+  color: #8599b6;
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 30px;
+  color: #8fa6c5;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 400px) {
+  .stopwatch { padding: 25px 15px; }
+  .buttons button { font-size: 0.9rem; }
+}

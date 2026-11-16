@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch | Devansh Pandey</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="stopwatch">
+    <header>
+      <h1>⏱ Stopwatch</h1>
+      <p>Every second counts.</p>
+    </header>
+
+    <section class="timer" aria-live="off">
+      <span id="minutes">00</span>:<span id="seconds">00</span><span class="milliseconds">.<span id="milliseconds">00</span></span>
+    </section>
+
+    <section class="buttons">
+      <button id="startBtn" class="start">▶ Start</button>
+      <button id="pauseBtn" class="pause" disabled>Ⅱ Pause</button>
+      <button id="lapBtn" class="lap" disabled>🏁 Lap</button>
+      <button id="resetBtn" class="reset">↻ Reset</button>
+    </section>
+
+    <section class="lap-section">
+      <h2>Lap Records</h2>
+      <ul id="lapList">
+        <li class="empty">Your laps will appear here.</li>
+      </ul>
+    </section>
+
+    <footer>Made with ❤️ by Devansh Pandey</footer>
+  </main>
+</body>
+</html>
